@@ -49,6 +49,40 @@ convertCurrency(543, "japan")
 // global scope vs block scope
 
 // Write a function that takes a number as an argument and checks if the number is even or odd
-// write a function that takes in an array of names, loops through the names changing them to all uppercase
+function checkEvenOdd(number) {
+    if (number % 2 === 0) {
+        console.log(number + " is even");
+    } else {
+        console.log(number + " is odd");
+    }
+}
 
+checkEvenOdd(4); 
+checkEvenOdd(7);  
+checkEvenOdd(0);  
+// write a function that takes in an array of names, loops through the names changing them to all uppercase
+function convertNamesToUppercase(namesArray) {
+    // Loop through the array and convert each name to uppercase
+    for (let i = 0; i < namesArray.length; i++) {
+        namesArray[i] = namesArray[i].toUpperCase();
+    }
+    console.log(namesArray);
+    return namesArray; // Optional: returning the modified array
+}
+
+// Alternative using map() with arrow function
+const convertNamesToUppercaseArrow = (namesArray) => {
+    return namesArray.map(name => name.toUpperCase());
+}
+
+// Test the functions
+let names = ["alice", "bob", "charlie"];
+convertNamesToUppercase(names);  
+// Output: ["ALICE", "BOB", "CHARLIE"]
+
+let moreNames = ["david", "eve", "frank"];
+console.log(convertNamesToUppercaseArrow(moreNames));  
+// Output: ["DAVID", "EVE", "FRANK"]
 // strings and numbers and arrays
+
+
