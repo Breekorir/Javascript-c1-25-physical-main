@@ -27,3 +27,10 @@ console.log( 32>5 || 5>10 ) //  T && T -- T ---- The Truth Table
 
 
 console.log( 68%2 == 0 ); // true - even
+
+
+
+console.log("**********************");
+// type coercion
+console.log( 5 == "50" );
+console.log( 5 === "5" );
