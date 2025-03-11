@@ -19,7 +19,7 @@ console.log(car.yom); // using the dot notation - 2018
 
 const people = [
     {
-      name: "Albert",
+      name: "Albert Kipchirchir Melly",
       age: 50,
       isKenyan: true,
       schools: ["Meteitei", "JKUAT", "MKU"],
@@ -66,7 +66,7 @@ const people = [
     },
     {
       name: "Diana",
-      age: 28,
+      age: 18,
       isKenyan: false,
       schools: ["St. Mary's", "Strathmore University"],
       work: {
@@ -133,22 +133,53 @@ const people = [
       height: 6.2,
     },
   ];
-
+// JSON
   
 //   print/log the work place for the thrid person
-console.log(people[2].work.company);
 
 // log the name of Felix's sibling
-
-console.log(people[5].siblings[0].name); 
+// const felix = people.find((person)=>person.name==="Felix")
+console.log(people[5].siblings[0].name)
 // log the second school that Diana went to
-console.log(people[3].schools[1]);
-
 // the age of the youngest person
-console.log(people[5].age);
+console.log(people[3].age);
+// log the number of Glady's siblings   
 
-// log the number of Glady's siblings 
-console.log(people[6].siblings.length);
-  
-const youngestAge = Math.min(...people.map(person => person.age));
-console.log(youngestAge);
+
+function findYoungestPerson(peopleList){
+    let youngestAge = peopleList[0].age // an assuptiom - first person in the list is the younges
+    for(let index=1;index<peopleList.length;index++){
+        if(peopleList[index].age<youngestAge){ // if current person in the loop is younger -- update youngestAge
+          youngestAge = peopleList[index].age
+        }
+    }
+    console.log( youngestAge );
+    // const youngestPerson =  peopleList.find(person=>person.age===youngestAge).name
+    // console.log(youngestPerson);
+}
+findYoungestPerson(people)
+
+
+const username = "kipchirchir"
+
+// String --- propteries -- .legnth
+
+console.log(  username.endsWith("k") );
+console.log(  username.endsWith("r") );
+console.log(  username.toUpperCase() );
+console.log(  username.charAt(0) );
+
+console.log( username.replace("kip", "chep") );
+
+const price = 900.87844832239293
+console.log( price.toFixed(2) );
+//  Number
+// JS global objects --- String, Number, Array, Object, Math, Date ........ provide properties and methods(functions) to help manipulate data
+
+const colors = ["red", "green"]
+ colors.push("yellow") 
+console.log(colors);
+console.log( colors.reverse() );
+console.log(colors.indexOf("green"));
+
+
