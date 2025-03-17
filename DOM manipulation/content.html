@@ -1,25 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Changing elements Content using js</title>
-</head>
-<body>
-    <h1>Changing elements Content using js</h1>
-<ul>
-    <li>Text Content</li>
-    <li>InnerHTML(child elements)</li>
-    <li>Attributes -- e.g. src attributesfor images</li>
-    <li>Classes</li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Changing Element's Content using js</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+  </head>
+  <body>
+    <h1>Changing Element's Content using js</h1>
 
-</ul>
-<button id="theme-btn">Dark</button>
-<Script src="./content.js"></Script>
-<style>
-    span{
-        color: blue;
-    }
+    <ul>
+      <li>Text Content</li>
+      <li>InnerHTML (child elements)</li>
+      <li>Attributes -- e.g. src attribute for images</li>
+      <li>Styles</li>
+      <li>Classes</li>
+    </ul>
+
+    <button id="theme-btn" name="myb">Dark</button>
+    <img src="" alt="kesoru logo here" />
+
+    <div id="user-profiles">
+      <div>
+        <img src="" alt="" />
+        <h3></h3>
+      </div>
+    </div>
+    <style>
+      span {
+        color: orange;
+      }
+      img {
+        width: 200px;
+      }
+      #user-profiles {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      #user-profiles > div {
+        background-color: rgb(107, 158, 158);
+        margin: 10px;
+      }
     </style>
-</body>
+    <script src="content.js"></script>
+  </body>
 </html>

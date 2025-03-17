@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="#">logo</a>
+        <button id="open-menu">Menu</button>
+        <nav id ="mobile-menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Clients</a>
+            <a href="#">Contacts</a>
+<button id="close-menu">Close Menu</button>
+        </nav>
+    </header>
+    <main>
+        <h1>Javascript Events</h1>
+        <p>Events allow for running javascriptcode(a callback)when a user interacts with an element eg click,type an input element ,scroll...</p>
+        <input type="text" name="search-element" id="search-element"/>
+       <input type="text" name="password" id="pass"/>
+</main>
+<style>
+header{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: beige;
+}
+header nav{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 143, 0, 0.9);
+    display: none;/*hiding nav by default --use js to bring back*/
+    gap: 30px;
+    padding: 40px;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 25px;
+}
+main{
+    text-align: center;
+    padding: 20px;
+    height: 5000px;
+}
+header nav a{
+    color: white;
+    text-decoration: none;
+}
+.opened-nav{
+    display: flex;
+    animation: slide-in-left 0.3s ease-in-out forwards;
+}
+@keyframes slide-in-left{
+0%{
+    transform: translateX(-1000px);
+    object-position: 0;
+
+}
+100%{
+    transform: translateX(0);
+    opacity: 1;
+}
+}
+</style>
+<script src="./events.js"></script>
+</body>
+</html>

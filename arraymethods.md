@@ -15,6 +15,8 @@
 
 - Given an array of numbers, return an array where each element is the product of all the elements in the original array except the current element.
 
+<!--  [1,2,3,4,5,6,7]  -->
+<!--  [45, ]  -->
 #### example interview question
 
 - Give the array below (in articles.js)
@@ -23,6 +25,3 @@ Q: sort without mutating based on
 
 a) upvotes (ascending order)
 b) date (desc/backwards-- latest date first)
-
-//Given an array of numbers, write a function that calculates the average of the numbers.
-

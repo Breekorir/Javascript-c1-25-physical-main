@@ -81,4 +81,83 @@ const result = getWeights([1, 2, 3, 4, 5]);
 console.log(result); // [120, 60, 40, 30, 24]
 
 const resultTwo = getWeights([122, 345, 34, 67, 89, 90]);
-console.log(resultTwo); // [421263270, 149376180, 1426058850, 727617900, 546105150, 510657900]
+console.log(resultTwo); // [421263270, 149376180, 1426058850, 727617900, 546105150, 510657900]Write a function `rotateArray(arr, k)` that rotates an array `arr` by `k` positions to the right. For example, if `arr = [1, 2, 3, 4, 5]` and `k = 2`, the output should be `[4, 5, 1, 2, 3]`.
+//Write a function `rotateArray(arr, k)` that rotates an array `arr` by `k` positions to the right. For example, if `arr = [1, 2, 3, 4, 5]` and `k = 2`, the output should be `[4, 5, 1, 2, 3]`.
+
+
+function rotateArray(arr, k) {
+    if (!arr || arr.length === 0) arr;
+    else if (k === 0) arr;
+    else {
+        // Normalize k
+        k = k % arr.length;
+        if (k < 0) k = arr.length + k;
+        
+        // Store original array length
+        const n = arr.length;
+        // Create temporary array to hold values
+        const temp = [];
+        
+        // Copy original array to temp
+        for (let i = 0; i < n; i++) {
+            temp[i] = arr[i];
+        }
+        
+        // Perform rotation by shifting elements
+        for (let i = 0; i < n; i++) {
+            arr[(i + k) % n] = temp[i];
+        }
+    }
+}
+
+// Test cases
+let arr1 = [1, 2, 3, 4, 5];
+rotateArray(arr1, 2);
+console.log(arr1);     // [4, 5, 1, 2, 3]
+
+let arr2 = [1, 2, 3];
+rotateArray(arr2, 5);
+console.log(arr2);     // [2, 3, 1]
+
+let arr3 = [];
+rotateArray(arr3, 3);
+console.log(arr3);     // []
+
+let arr4 = [1];
+rotateArray(arr4, 1);
+console.log(arr4);     // [1]
+
+let arr5 = [1, 2, 3];
+rotateArray(arr5, -1);
+console.log(arr5);     // [2, 3, 1]
+
+    
+
+//Write a function `validateEmail(email)` that takes an email address `email` and returns true if it is a valid email address format, false otherwise.
+function validateEmail(email) {
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
+}
+
+// Test cases
+console.log(validateEmail("test@example.com")); // true
+console.log(validateEmail("user.name@domain.co")); // true
+console.log(validateEmail("invalid-email@")); // false
+console.log(validateEmail("another.test@domain")); // false
+console.log(validateEmail("123@domain.com")); // true
+console.log(validateEmail("user@sub.domain.com")); // true
+//Write a function `shuffleArray(arr)` that shuffles the elements of an array `arr` in-place, so that every permutation is equally likely.
+function shuffleArray(arr) {
+    for (let index = 0; index < arr.length; index++) {
+        let j = Math.floor(Math.random() * (index + 1));
+        [arr[index], arr[j]] = [arr[j], arr[index]]; // Swap elements
+
+        
+    }
+    
+}
+let array = [1,2,3,4,5]
+shuffleArray(array)
+console.log(array);
+//Write a function `shuffleArray(arr)` that shuffles the elements of an array `arr` in-place, so that every permutation is equally likely.
+//Write a function `binarySearch(arr, target)` that implements the binary search algorithm to find the index of `target` in a sorted array `arr`. Return -1 if `target` is not found.
